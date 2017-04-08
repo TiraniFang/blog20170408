@@ -12,4 +12,17 @@
 
 ## 如何将markdown变成html
 
-1：搜索marked开源库
+1：搜索marked开源库   chjj/marked
+2: 百度搜索 marked cdn js    复制链接 https://cdn.bootcss.com/marked/0.3.6/marked.js
+3: 在页面引入这个js，再参考   chjj/marked的browser 使用 
+    创建一个id为content的div，在插入一个script，内容为：
+    <script>
+    var markdown=`
+    # Marked in browser
+    ## Rendered by **marked**.
+    [百度](www.baidu.com)  `
+    var html=marked(markdown)
+     document.getElementById('content').innerHTML =html;
+     
+    </script>
+ 4:添加简单的样式  搜索 typo.css
